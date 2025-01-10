@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Orb, OrbAnimation } from "./components/OrbAnimation";
+import { Orb, useOrbAnimation } from "./hooks/useOrbAnimation";
 
 import Canvas from "./components/Canvas";
 import FullscreenContainer from "./components/FullscreenContainer";
@@ -10,10 +10,11 @@ function App() {
   const orbsRef = useRef<Orb[]>([]);
   const animationFrameRef = useRef<number>();
 
+  useOrbAnimation({ orbsRef, animationFrameRef });
+
   return (
     <FullscreenContainer>
       <Canvas orbsRef={orbsRef} animationFrameRef={animationFrameRef} />
-      <OrbAnimation orbsRef={orbsRef} animationFrameRef={animationFrameRef} />
     </FullscreenContainer>
   );
 }

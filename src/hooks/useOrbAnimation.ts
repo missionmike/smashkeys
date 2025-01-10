@@ -1,4 +1,4 @@
-import { CanvasProps } from "./Canvas";
+import { CanvasProps } from "../components/Canvas";
 import { useEffect } from "react";
 
 export interface Orb {
@@ -12,10 +12,10 @@ export interface Orb {
   hue: number;
 }
 
-export const OrbAnimation: React.FC<CanvasProps> = ({
+export const useOrbAnimation = ({
   orbsRef,
   animationFrameRef,
-}) => {
+}: CanvasProps) => {
   useEffect(() => {
     const handleKeyDown = (e: globalThis.KeyboardEvent) => {
       // Prevent all other keyboard shortcuts and special keys
@@ -47,7 +47,7 @@ export const OrbAnimation: React.FC<CanvasProps> = ({
       const x = Math.random() * (canvas.width - 2 * radius) + radius;
       const y = Math.random() * (canvas.height - 2 * radius) + radius;
 
-      const newOrb = {
+      const newOrb: Orb = {
         x,
         y,
         radius,
@@ -66,6 +66,4 @@ export const OrbAnimation: React.FC<CanvasProps> = ({
       window.removeEventListener("keydown", handleKeyDown, true);
     };
   }, [animationFrameRef, orbsRef]);
-
-  return null;
 };
