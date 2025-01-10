@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 env:
+  GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
   VITE_GTM_ID: ${{ vars.VITE_GTM_ID }}
 
 jobs:
