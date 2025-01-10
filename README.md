@@ -1,6 +1,7 @@
 # SmashKeys!
 
-This project uses Vite.
+Does your kid ever want to mash the keyboard with you while you work? Hook them
+up with this! View the live site on https://www.smashkeys.org
 
 ## Setup
 
