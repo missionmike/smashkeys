@@ -6,3 +6,23 @@
   top: 0;
   left: 0;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+}
+
+p,
+a {
+  color: lavender;
+}
+
+a {
+  text-decoration: underline;
+}

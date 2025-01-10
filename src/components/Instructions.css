@@ -1,0 +1,16 @@
+.instructions {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s;
+
+  &[data-has-typed="true"] {
+    opacity: 0;
+  }
+}
