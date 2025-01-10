@@ -41,7 +41,7 @@ export const OrbAnimation: React.FC<CanvasProps> = ({
 
       const radius = Math.min(
         Math.max(300, Math.random() * Math.min(canvas.width, canvas.height)),
-        Math.min(canvas.width, canvas.height)
+        Math.min(canvas.width, canvas.height),
       );
 
       const x = Math.random() * (canvas.width - 2 * radius) + radius;

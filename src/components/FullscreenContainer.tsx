@@ -16,8 +16,8 @@ const FullscreenContainer: React.FC<FullscreenContainerProps> = ({
           await containerRef.current.requestFullscreen();
         }
       }
-    } catch (err) {
-      console.error("Error attempting to enter fullscreen:", err);
+    } catch {
+      // Do nothing.
     }
   };
 

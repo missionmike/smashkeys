@@ -66,7 +66,7 @@ const Canvas: React.FC<CanvasProps> = ({ orbsRef, animationFrameRef }) => {
           0,
           orb.x,
           orb.y,
-          orb.radius
+          orb.radius,
         );
         const hue1 = orb.hue;
         const hue2 = (hue1 + 40) % 360;
